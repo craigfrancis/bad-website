@@ -1,0 +1,244 @@
+/*--------------------------------------------------*/
+/* General Setup                                    */
+
+	html, body, div, span, applet, object, iframe,
+	h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+	a, abbr, acronym, address, big, cite, code,
+	del, dfn, em, font, img, ins, kbd, q, s, samp,
+	small, strike, strong, sub, sup, tt, var,
+	dl, dt, dd, ol, ul, li,
+	fieldset, form, label, legend,
+	table, caption, tbody, tfoot, thead, tr, th, td {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 100%;
+		vertical-align: baseline;
+		background: transparent;
+	}
+
+	article, aside, figcaption, figure, footer,
+	header, hgroup, main, nav, section {
+		display: block;
+	}
+
+	body {
+		font-family: verdana, arial, helvetica, sans-serif;
+		font-size: 1em;
+		line-height: 1.2em;
+		color: #000;
+		background-color: #FFF;
+		padding: 2em 2em 1em 2em;
+	}
+
+	a {
+		color: #00E;
+	}
+
+	a img {
+		border: 0;
+	}
+
+	p,
+	h1,
+	h2,
+	h3 {
+		margin: 0 0 1em 0;
+	}
+
+	ul,
+	ol {
+		margin: 0 0 1em 2em;
+	}
+
+	p,
+	ul,
+	ol {
+		max-width: 45em;
+	}
+
+	hr {
+		margin: 1em 0 1em 0;
+		border: 0;
+		border-bottom: 1px solid #000;
+	}
+
+	table {
+		border-collapse: collapse;
+		border-spacing: 0;
+	}
+
+	table th,
+	table td {
+		vertical-align: top;
+	}
+
+/*--------------------------------------------------*/
+/* Generic Classes                                  */
+
+	.visually_hidden {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
+		clip: rect(0 0 0 0);
+		border: 0;
+		margin: -1px;
+		padding: 0;
+	}
+
+/*--------------------------------------------------*/
+/* Basic Form                                       */
+
+	.basic_form {
+		margin: 0 0 1em 0;
+	}
+
+	.basic_form fieldset > h2 {
+		font-size: 1em;
+		margin: 0;
+		padding: 1em 0 0 1em;
+	}
+
+	.basic_form fieldset > h2:first-child {
+		padding-top: 0;
+	}
+
+	.basic_form fieldset > h2 + p {
+		margin-top: 1em;
+	}
+
+	.basic_form .error_list,
+	.basic_form .error {
+		color: #D00;
+		background: inherit;
+		font-weight: bold;
+	}
+
+	.basic_form .row {
+		padding: 5px 0 0 0;
+		clear: both;
+	}
+
+	.basic_form .row .label {
+		display: block;
+		font-weight: normal;
+	}
+
+	.basic_form .row .label abbr.required {
+		border: 0;
+	}
+
+	.basic_form .row .input sub {
+		font-size: 0.8em;
+	}
+
+	.basic_form .row.info .input,
+	.basic_form .row.radio .input,
+	.basic_form .row.check .input {
+		display: block;
+		padding: 0 0 1em 1.5em;
+	}
+
+	.basic_form .row.check.input_first .input {
+		padding: 0;
+		display: inline;
+	}
+
+	.basic_form .row.check.input_first .label {
+		display: inline;
+	}
+
+	@media only screen and (min-width: 40em) {
+		.basic_form .row {
+			padding-left: 11.5em;
+		}
+		.basic_form .row .label,
+		.basic_form .row.input_first .input {
+			float: left;
+			width: 11em;
+			margin: 0 0 0 -11.5em;
+			text-align: right;
+		}
+		.basic_form .row.text .label,
+		.basic_form .row.date .label,
+		.basic_form .row.email .label,
+		.basic_form .row.password .label,
+		.basic_form .row.postcode .label,
+		.basic_form .row.textarea .label,
+		.basic_form .row.number .label {
+			margin-top: 2px;
+		}
+		.basic_form .row.info .input {
+			margin-bottom: 0;
+			margin-left: 0;
+		}
+		.basic_form .row.input_first .label {
+			float: none;
+			display: inline;
+			width: auto;
+			margin-left: 0;
+			text-align: left;
+		}
+		.basic_form .row.info .input,
+		.basic_form .row.radio .input,
+		.basic_form .row.check .input,
+		.basic_form .row.checkboxes .input:nth-child(2),
+		.basic_form .row.radios .input:nth-child(2) {
+			display: block;
+			padding: 0;
+		}
+	}
+
+	.basic_form .row.date input {
+		text-align: center;
+	}
+
+	.basic_form .row.textarea .input textarea {
+		width: 90%;
+	}
+
+/*--------------------------------------------------*/
+/* Basic Table                                      */
+
+	.basic_table {
+		margin: 0 0 1em 0;
+	}
+
+	.basic_table.full_width table {
+		width: 100%;
+	}
+
+	.basic_table.duplicate_caption caption {
+		display: none;
+	}
+
+	.basic_table thead .sort {
+		font-size: 0.75em;
+	}
+
+	.basic_table th,
+	.basic_table th a {
+		color: inherit;
+		background: #EEE;
+		text-decoration: none;
+	}
+
+	.basic_table th,
+	.basic_table td {
+		padding: 2px 4px;
+		border: 1px solid #000;
+	}
+
+	.basic_table td.no_results {
+		text-align: center;
+		padding: 2em;
+	}
+
+	.basic_table tr.even {
+		background: #E0E0E0;
+	}
+
+	.basic_table tr:hover {
+		background-color: #FFD;
+	}
