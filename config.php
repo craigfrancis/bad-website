@@ -74,7 +74,7 @@ if (isset($_GET['config']) && $_GET['config'] == 1) {
 
 		public function escape_string($val) {
 			$this->connect();
-			return '"' . mysqli_real_escape_string($val) . '"';
+			return '"' . mysqli_real_escape_string($this->link, $val) . '"';
 		}
 
 		public function query($sql, $parameters = NULL) {
