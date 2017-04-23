@@ -30,6 +30,7 @@
 			} else {
 
 				setcookie('user_id', $row['id']);
+				setcookie('admin', $row['admin']);
 
 				if ($row['admin'] == 'true') {
 					header('Location: ./profile-list.php');

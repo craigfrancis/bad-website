@@ -8,7 +8,7 @@
 //--------------------------------------------------
 // Delete user cookie
 
-	setcookie('user_id', $row['id']);
+	setcookie('user_id', '', strtotime('-1 hour'));
 
 ?>
 <!DOCTYPE html>

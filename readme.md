@@ -11,3 +11,15 @@ There are 3 main areas to focus on:
 3. [Performance](./public/performance/)
 
 The order is not important, as a developer you really need to think about all 3.
+
+---
+
+## Setup
+
+Edit the `config.php` file, so it includes the connection details to a MySQL database.
+
+The login to this database should only have access to 1 database.
+
+Run the following command, to populate the database, and reset some file/folder permissions.
+
+	./reset/reset.sh

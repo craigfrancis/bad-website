@@ -12,6 +12,10 @@
 		header('Location: ./login.php');
 	}
 
+	if (!isset($_COOKIE['admin']) || $_COOKIE['admin'] != 'true') {
+		exit('<p>Permission denied!</p>');
+	}
+
 //--------------------------------------------------
 // Get profile
 
