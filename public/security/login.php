@@ -86,7 +86,5 @@
 		</fieldset>
 	</form>
 
-	<p>After logging in, you will go to your <a href="./profile-edit.php?id=726">profile page</a>.</p>
-
 </body>
 </html>
