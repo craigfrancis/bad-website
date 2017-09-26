@@ -66,7 +66,7 @@
 
 	<h1>Bad security</h1>
 
-	<p>This the profile for <strong><?= $row['username'] ?></strong>, I wonder what we can do to break this.</p>
+	<p>This is the profile for <strong><?= $row['username'] ?></strong>, I wonder what we can do to break this.</p>
 
 	<form action=<?= $_SERVER['PHP_SELF'] ?> method="post" accept-charset="UTF-8" enctype="multipart/form-data" class="basic_form">
 		<fieldset>
