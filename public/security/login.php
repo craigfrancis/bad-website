@@ -58,9 +58,9 @@
 </head>
 <body>
 
-	<h1>Bad security</h1>
+	<h1>Bad Security</h1>
 
-	<p>Welcome to bad security, you probably don't need to know the password to login.</p>
+	<p>Welcome to Bad Security, you probably don't need to know the password to log in.</p>
 
 	<form action=<?= $_SERVER['PHP_SELF'] ?> method="post" accept-charset="UTF-8" class="basic_form">
 		<fieldset>
@@ -80,13 +80,13 @@
 			</div>
 
 			<div class="row submit">
-				<input type="submit" name="button" value="Login" />
+				<input type="submit" name="button" value="Log in" />
 			</div>
 
 		</fieldset>
 	</form>
 
-	<p>When we login, we will go to a <a href="./profile-edit.php?id=726">profile page</a>.</p>
+	<p>After logging in, you will go to your <a href="./profile-edit.php?id=726">profile page</a>.</p>
 
 </body>
 </html>
