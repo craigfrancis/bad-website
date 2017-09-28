@@ -62,7 +62,7 @@
 
 	<p>Welcome to Bad Security, you probably don't need to know the password to log in.</p>
 
-	<form action=<?= $_SERVER['PHP_SELF'] ?> method="post" accept-charset="UTF-8" class="basic_form">
+	<form action=<?= $_SERVER['PHP_SELF'] ?> method="get" accept-charset="UTF-8" class="basic_form">
 		<fieldset>
 
 			<?php if ($error) { ?>
