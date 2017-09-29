@@ -22,6 +22,6 @@ Run the following command, to populate the database, and reset some file/folder 
 
 	./reset/reset.sh
 
-Then set the DocumentRoot for your web server (Apache/nginx/etc) to the `/public/` folder.
+Then set your web servers `DocumentRoot` to the `/public/` folder.
 
 And please don't run this website so that anyone else can view it (even on your local network)... otherwise your own computer might get hacked.
