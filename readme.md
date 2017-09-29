@@ -16,9 +16,7 @@ The order is not important, as a developer you really need to think about all 3.
 
 ## Setup
 
-Edit the `config.php` file, so it includes the connection details to a single MySQL database.
-
-Really, the connection details should only have access to 1 database, one that will be exploited.
+Edit the `config.php` file, so it includes the connection details to a **single** MySQL database.
 
 Run the following command, to populate the database, and reset some file/folder permissions.
 
