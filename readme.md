@@ -6,7 +6,7 @@ The question is, can you find all the problems?
 
 There are 3 main areas to focus on:
 
-1. [Security](./public/security/) ([Answers/Cheats](./public/security/answers/))
+1. [Security](./public/security/) - [Answers/Cheats](./public/security/answers/)
 2. Accessibility (TODO)
 3. Performance (TODO)
 
