@@ -141,7 +141,8 @@
 	}
 
 	.basic_form .row.identification .input input,
-	.basic_form .row.password .input input {
+	.basic_form .row.password .input input,
+	.basic_form .row.picture_url .input input {
 		width: 40em;
 	}
 
