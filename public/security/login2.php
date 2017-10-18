@@ -101,7 +101,7 @@
 <head>
 	<meta charset="UTF-8" />
 	<title>Bad security</title>
-	<link rel="stylesheet" type="text/css" href="../../a/main.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="/a/main.css" media="all" />
 </head>
 <body>
 
