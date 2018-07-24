@@ -1,12 +1,12 @@
 <?php
 
 	$config = array(
-		'allowed_ip' => '127.0.0.1',
+		'allowed_ip' => '10.211.55.2',
 		'database' => array(
 				'host' => 'localhost',
 				'name' => 's-craig-badwebsite',
 				'user' => 's-craig-badwebsite',
-				'pass' => 'fpvmZYFzRx7xyRrseVzyTftTVwGJUq',
+				'pass' => 'gNvxxks2dREVHEZKJu{wwDn>6Aof4**f',
 			),
 	);
 
