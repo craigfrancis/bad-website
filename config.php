@@ -1,7 +1,7 @@
 <?php
 
 	$config = array(
-		'allowed_ip' => '10.211.55.2',
+		'allowed_ip' => '127.0.0.1',
 		'database' => array(
 				'host' => 'localhost',
 				'name' => 's-craig-badwebsite',
@@ -18,7 +18,7 @@
 		$_SERVER['REQUEST_URI'] = preg_replace('/^' . preg_quote(ROOT, '/') . '/', '', realpath($_SERVER['SCRIPT_FILENAME']));
 	}
 
-	$config['path_public'] = ROOT . '/public/';
+	$config['path_public'] = ROOT . '/public';
 	$config['request_ip'] = (isset($_SERVER['REMOTE_ADDR']) ? $_SERVER['REMOTE_ADDR'] : NULL);
 	$config['request_uri'] = (isset($_SERVER['REQUEST_URI']) ? $_SERVER['REQUEST_URI'] : NULL);
 
@@ -44,16 +44,14 @@
 
 	ini_set('taint.error_level', 0);
 
-
-if (isset($_GET['config']) && $_GET['config'] == 1) {
-	echo '<pre>';
-	var_dump(ini_get('error_level'));
-	var_dump($config);
-	var_dump($_SERVER);
-	echo '</pre>';
-	exit();
-}
-
+	if (isset($_GET['config']) && $_GET['config'] == 1) {
+		echo '<pre>';
+		var_dump(ini_get('error_level'));
+		var_dump($config);
+		var_dump($_SERVER);
+		echo '</pre>';
+		exit();
+	}
 
 //--------------------------------------------------
 
@@ -171,7 +169,7 @@ if (isset($_GET['config']) && $_GET['config'] == 1) {
 			return mysqli_fetch_assoc($result);
 		}
 
-		private function connect() {
+		public function connect() {
 
 			if ($this->link) {
 				return;

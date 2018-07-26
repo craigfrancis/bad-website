@@ -30,9 +30,9 @@
 
 			$ext = substr($_FILES['picture_file']['name'], strrpos($_FILES['picture_file']['name'], '.'));
 
-			$_REQUEST['picture_url'] = '/security/uploads/profile-pictures/' . $_REQUEST['id'] . $ext;
+			$_REQUEST['picture_url'] = './uploads/profile-pictures/' . $_REQUEST['id'] . $ext;
 
-			$success = move_uploaded_file($_FILES['picture_file']['tmp_name'], $config['path_public'] . $_REQUEST['picture_url']);
+			$success = move_uploaded_file($_FILES['picture_file']['tmp_name'], $config['path_public'] . '/security/' . $_REQUEST['picture_url']);
 			if (!$success) {
 				exit('<p>Could not upload file (check permissions)</p>');
 			}
@@ -60,7 +60,7 @@
 <head>
 	<meta charset="UTF-8" />
 	<title>Bad security</title>
-	<link rel="stylesheet" type="text/css" href="/a/main.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="../a/main.css" media="all" />
 </head>
 <body>
 
