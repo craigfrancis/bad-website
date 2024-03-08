@@ -7,6 +7,8 @@
 
 	$error = false;
 
+	if (!isset($_REQUEST['username'])) $_REQUEST['username'] = '';
+
 //--------------------------------------------------
 // Logged in
 

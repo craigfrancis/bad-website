@@ -1,7 +1,7 @@
 <?php
 
 	$config = array(
-		'allowed_ip' => '127.0.0.1',
+		'allowed_ip' => 'fd::5', // 127.0.0.1
 		'database' => array(
 				'host' => 'localhost',
 				'name' => 's-craig-badwebsite',

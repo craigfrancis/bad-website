@@ -10,7 +10,7 @@
 //--------------------------------------------------
 // Login check
 
-	$username = $_POST['identification'];
+	$username = $_POST['username'];
 	$password = $_POST['password'];
 
 	if ($username || $password) {
@@ -116,9 +116,9 @@
 				<p class="error"><?= $error ?></p>
 			<?php } ?>
 
-			<div class="row identification">
-				<span class="label"><label for="fld_identification">Username</label>:</span>
-				<span class="input"><input name="identification" id="fld_identification" type="text" value="" autofocus="autofocus" /></span>
+			<div class="row username">
+				<span class="label"><label for="fld_username">Username</label>:</span>
+				<span class="input"><input name="username" id="fld_username" type="text" value="" autofocus="autofocus" /></span>
 			</div>
 
 			<div class="row password">

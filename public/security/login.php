@@ -7,6 +7,9 @@
 
 	$error = false;
 
+	if (!isset($_REQUEST['username'])) $_REQUEST['username'] = '';
+	if (!isset($_REQUEST['password'])) $_REQUEST['password'] = '';
+
 //--------------------------------------------------
 // Always connect to DB, to identify issues immediately.
 
@@ -15,7 +18,7 @@
 //--------------------------------------------------
 // Login check
 
-	if ($_REQUEST['identification'] || $_REQUEST['password']) {
+	if ($_REQUEST['username'] || $_REQUEST['password']) {
 
 		$sql = 'SELECT
 					id,
@@ -24,7 +27,7 @@
 				FROM
 					user
 				WHERE
-					username = "' . $_REQUEST['identification'] . '"';
+					username = "' . $_REQUEST['username'] . '"';
 
 		if ($row = $db->fetch_row($sql, $parameters)) {
 
@@ -74,9 +77,9 @@
 				<p class="error"><?= $error ?></p>
 			<?php } ?>
 
-			<div class="row identification">
-				<span class="label"><label for="fld_identification">Username</label>:</span>
-				<span class="input"><input name="identification" id="fld_identification" type="text" value="<?= $_REQUEST['identification'] ?>" autofocus="autofocus" /></span>
+			<div class="row username">
+				<span class="label"><label for="fld_username">Username</label>:</span>
+				<span class="input"><input name="username" id="fld_username" type="text" value="<?= $_REQUEST['username'] ?>" autofocus="autofocus" /></span>
 			</div>
 
 			<div class="row password">
