@@ -5,6 +5,9 @@
 
 	require_once('../../config.php');
 
+	if (!isset($_REQUEST['q'])) $_REQUEST['q'] = '';
+	if (!isset($_REQUEST['s'])) $_REQUEST['s'] = '';
+
 //--------------------------------------------------
 // Get profile
 
@@ -47,24 +50,32 @@
 		</p>
 	</form>
 
-	<div class="basic_table">
-		<table>
-			<thead>
-				<tr>
-					<th scope="col">Picture</th>
-					<th scope="col"><a href="./view.php?q=<?= $_REQUEST['q'] ?>&amp;s=<?= ($_REQUEST['s'] == 'ASC' ? 'DESC' : 'ASC') ?>">Username</a></th>
-				</tr>
-			</thead>
-			<tbody>
-				<?php foreach ($users as $user) { ?>
+	<?php if ($_REQUEST['q'] != '') { ?>
+
+		<hr />
+
+		<p>Results for <strong><?= $_REQUEST['q'] ?></strong></p>
+
+		<div class="basic_table">
+			<table>
+				<thead>
 					<tr>
-						<td><img src="<?= $user['picture_url'] ?>" alt="Profile picture for <?= $user['username'] ?>"></td>
-						<td><?= $user['username'] ?></td>
+						<th scope="col">Picture</th>
+						<th scope="col"><a href="./view.php?q=<?= $_REQUEST['q'] ?>&amp;s=<?= ($_REQUEST['s'] == 'ASC' ? 'DESC' : 'ASC') ?>">Username</a></th>
 					</tr>
-				<?php } ?>
-			</tbody>
-		</table>
-	</div>
+				</thead>
+				<tbody>
+					<?php foreach ($users as $user) { ?>
+						<tr>
+							<td><img src="<?= $user['picture_url'] ?>" alt="Profile picture for <?= $user['username'] ?>"></td>
+							<td><?= $user['username'] ?></td>
+						</tr>
+					<?php } ?>
+				</tbody>
+			</table>
+		</div>
+
+	<?php } ?>
 
 </body>
 </html>
