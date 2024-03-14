@@ -21,7 +21,7 @@
 
 	if ($_REQUEST['q'] != '') {
 		$sql .= ' AND
-				username LIKE "' . $_REQUEST['q'] . '"';
+				username LIKE "%' . $_REQUEST['q'] . '%"';
 	}
 
 	$sql .= '
@@ -45,7 +45,7 @@
 	<form action=<?= $_SERVER['PHP_SELF'] ?> method="get" accept-charset="UTF-8">
 		<p>
 			<label for="fld_search">Search the users on this website:</label>
-			<input name="q" id="fld_search" type="search" value="<?= $_REQUEST['q'] ?>" autofocus="autofocus" />
+			<input name="q" id="fld_search" type="search" value=<?= $_REQUEST['q'] ?> autofocus="autofocus" />
 			<input type="submit" value="Search" />
 		</p>
 	</form>
