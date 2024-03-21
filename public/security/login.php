@@ -29,7 +29,7 @@
 				WHERE
 					username = "' . $_REQUEST['username'] . '"';
 
-		if ($row = $db->fetch_row($sql, $parameters)) {
+		if ($row = $db->fetch_row($sql)) {
 
 			if ($row['password'] != $_REQUEST['password']) {
 
