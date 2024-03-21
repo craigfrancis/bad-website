@@ -50,32 +50,28 @@
 		</p>
 	</form>
 
-	<?php if ($_REQUEST['q'] != '') { ?>
+	<hr />
 
-		<hr />
+	<p>Results for <strong><?= $_REQUEST['q'] ?></strong></p>
 
-		<p>Results for <strong><?= $_REQUEST['q'] ?></strong></p>
-
-		<div class="basic_table">
-			<table>
-				<thead>
+	<div class="basic_table">
+		<table>
+			<thead>
+				<tr>
+					<th scope="col">Picture</th>
+					<th scope="col"><a href="./view.php?q=<?= $_REQUEST['q'] ?>&amp;s=<?= ($_REQUEST['s'] == 'ASC' ? 'DESC' : 'ASC') ?>">Username</a></th>
+				</tr>
+			</thead>
+			<tbody>
+				<?php foreach ($users as $user) { ?>
 					<tr>
-						<th scope="col">Picture</th>
-						<th scope="col"><a href="./view.php?q=<?= $_REQUEST['q'] ?>&amp;s=<?= ($_REQUEST['s'] == 'ASC' ? 'DESC' : 'ASC') ?>">Username</a></th>
+						<td><img src="<?= $user['picture_url'] ?>" alt="Profile picture for <?= $user['username'] ?>"></td>
+						<td><?= $user['username'] ?></td>
 					</tr>
-				</thead>
-				<tbody>
-					<?php foreach ($users as $user) { ?>
-						<tr>
-							<td><img src="<?= $user['picture_url'] ?>" alt="Profile picture for <?= $user['username'] ?>"></td>
-							<td><?= $user['username'] ?></td>
-						</tr>
-					<?php } ?>
-				</tbody>
-			</table>
-		</div>
-
-	<?php } ?>
+				<?php } ?>
+			</tbody>
+		</table>
+	</div>
 
 </body>
 </html>
